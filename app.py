@@ -205,9 +205,9 @@ def create_comparison_chart(saw_results, wp_results):
 
 # Header
 st.markdown("""
-    <h1>Sistem Pendukung Keputusan Hosting Website</h1>
+    <h1>Sistem Pendukung Keputusan Cloud Storage</h1>
     <p style='text-align: center; color: #a78bfa; font-size: 18px; margin-bottom: 30px;'>
-        Metode SAW & Weighted Product dengan Logika Fuzzy
+        by Livia Citra Atrianda
     </p>
 """, unsafe_allow_html=True)
 
@@ -224,10 +224,11 @@ with st.sidebar:
     st.markdown("### Informasi")
     st.markdown("""
         **Dibuat oleh:**  
-        Livia
+        Livia 
         
-        **Aplikasi:**  
-        Logika Fuzzy 
+        **Studi Kasus:**  
+        Pemilihan Layanan  
+        Cloud Storage
     """)
 
 # Home Page
@@ -296,8 +297,6 @@ if page == "Home":
             st.rerun()
     
     
-
-
 # Perhitungan Page
 elif page == "Perhitungan":
     st.markdown("### Perhitungan SPK")
@@ -307,12 +306,12 @@ elif page == "Perhitungan":
     
     # Default data jika tidak ada upload
     default_data = {
-        'Alternatif': ['Hostinger', 'Niagahoster', 'Dewaweb', 'IDCloudHost', 'Qwords'],
-        'C1 Harga': [25000, 45000, 40000, 35000, 30000],
-        'C2 Storage': [10, 20, 15, 12, 18],
-        'C3 Bandwidth': [100, 200, 150, 120, 180],
-        'C4 Uptime': [99.5, 99.9, 99.7, 99.6, 99.8],
-        'C5 Support': [4, 5, 4, 3, 5]
+        'Alternatif': ['Google One', 'Dropbox Plus', 'OneDrive', 'Mega Pro', 'Box Business'],
+        'C1 Harga': [26900, 145000, 35000, 80000, 225000],
+        'C2 Kapasitas': [100, 2000, 1000, 2000, 1000],
+        'C3 Upload': [0, 2, 0, 0, 5],
+        'C4 Device': [5, 1, 1, 1, 99],
+        'C5 Keamanan': [4, 5, 4, 5, 5]
     }
     
     df_input = pd.DataFrame(default_data)
@@ -535,8 +534,8 @@ elif page == "Perbandingan":
 st.markdown("---")
 st.markdown("""
     <p style='text-align: center; color: #6b7280; font-size: 14px;'>
-        Sistem Pendukung Keputusan dengan Logika Fuzzy | 
+        by Livia Citra Atrianda | 
         <a href='https://github.com' style='color: #a78bfa;'>GitHub</a> | 
-        2024
+        2025
     </p>
 """, unsafe_allow_html=True)
